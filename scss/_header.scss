@@ -1,0 +1,71 @@
+.Navbar {
+    margin: .9rem .5rem auto .5rem;
+    display: flex;
+    padding: 18px;
+    font-family: sans-serif;
+    color: $grey;
+
+    &__Link {
+        padding-right: .8rem;
+      }
+    &__Link-brand {
+        max-width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    &__Items {
+        display: flex;
+        margin-left:auto;
+      }
+    &__Items--right {
+    margin-left:auto;
+    }
+    &__Link-toggle {
+        display: none;
+      }
+  }
+  
+  .header {
+      grid-column: full-start / full-end; 
+      display: grid;
+      grid-template-rows: 1fr repeat(2, min-content) 1fr;
+      grid-template-columns: [start-grid] repeat(6, [start-col] 1fr [end-col]) [end-grid];
+    //  justify-content: center;
+    //  grid-template-columns: repeat(6, 1fr);
+      &__h2 {
+        grid-column : start-col 1/ end-col 4;
+      }
+      &__p {
+          align-items : center;
+          grid-column : start-col 1/ end-col 2;
+      }
+      &__btn {
+        align-self : start;
+        justify-self: start;
+    }
+  }
+  
+@media only screen and (max-width: 768px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+    }
+    .Navbar {
+        &__Items {
+            display:none;
+        }
+        &__Items--right {
+            margin-left:0;
+        }
+        &__ToggleShow {
+            display: flex;
+        }
+        &__Link-toggle {
+            align-self: flex-end;
+            display: initial;
+            position: absolute;
+            cursor: pointer;
+        } 
+    }
+}

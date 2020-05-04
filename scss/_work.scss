@@ -1,0 +1,11 @@
+.work {
+    background-color: aqua;
+  //   grid-coloumn: 
+  &__picture{
+    grid-column : col-start 1/ col-end 3;
+    background-color: brown;
+  }
+  &__text{
+    grid-column : col-start 4/ full-end;
+background-color: black; }
+}

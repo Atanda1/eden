@@ -1,0 +1,88 @@
+.container {
+  display: grid;
+  grid-template-rows: 80vh repeat(2, 40vw) repeat(3, min-content);
+  grid-template-columns: [full-start] repeat(6, [col-start] minmax(min-content, 20vw) [col-end]) [full-end]; }
+
+.work {
+  background-color: aqua; }
+  .work__picture {
+    grid-column: col-start 1/ col-end 3;
+    background-color: brown; }
+  .work__text {
+    grid-column: col-start 4/ full-end;
+    background-color: black; }
+
+.faq {
+  background-color: brown;
+  grid-column: full-start / full-end; }
+
+.testimonial {
+  background-color: green;
+  grid-column: full-start / full-end; }
+
+.footer {
+  background-color: yellow;
+  grid-column: full-start / full-end; }
+
+.detail {
+  grid-column: full-start / full-end;
+  background-color: red; }
+
+.Navbar {
+  margin: .9rem .5rem auto .5rem;
+  display: flex;
+  padding: 18px;
+  font-family: sans-serif;
+  color: grey; }
+  .Navbar__Link {
+    padding-right: .8rem; }
+  .Navbar__Link-brand {
+    max-width: 100%; }
+    .Navbar__Link-brand img {
+      width: 100%; }
+  .Navbar__Items {
+    display: flex;
+    margin-left: auto; }
+  .Navbar__Items--right {
+    margin-left: auto; }
+  .Navbar__Link-toggle {
+    display: none; }
+
+.header {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr;
+  justify-content: center; }
+  .header__p {
+    align-items: center; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
+
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column; }
+  .Navbar__Items {
+    display: none; }
+  .Navbar__Items--right {
+    margin-left: 0; }
+  .Navbar__ToggleShow {
+    display: flex; }
+  .Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer; } }
+
+.header__h2, .header__p {
+  font-weight: 400; }
+
+.header__h2 {
+  font-size: 2.5rem;
+  color: black;
+  line-height: 1; }
+
+.header__p {
+  font-size: .6rem;
+  color: black; }
